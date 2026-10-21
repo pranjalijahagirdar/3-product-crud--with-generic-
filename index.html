@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>product crud</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <h1>Fetch Product Crud (with generic)</h1>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-4 mb-3">
+                <div class="card">
+                    <h2>Products Form</h2>
+                    <div class="card-body">
+                        <form id="productForm">
+                            <div class="form-group">
+                                <label for="titleControl">Title :</label>
+                                <input class="form-control" id="titleControl" type="text">
+                            </div>
+                            <div class="form-group">
+                                <label for="brandControl">Brand :</label>
+                                <input class="form-control" id="brandControl" type="text">
+                            </div>
+                            <div class="form-group">
+                                <label for="categoryControl">Category :</label>
+                                <input class="form-control" id="categoryControl" type="text">
+                            </div>
+                            <div class="form-group">
+                                <label for="priceControl">Price :</label>
+                                <input class="form-control" id="priceControl" type="text">
+                            </div>
+                            <button type="submit" class="btn btn-sm btn-block btn-primary" id="addProductBtn">Add Product</button>
+                            <button type="button" class="btn btn-sm btn-block btn-info d-none" id="UpdateProductBtn">Update Product</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="row">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Brand</th>
+                                <th>Category</th>
+                                <th>Price</th>
+                                <th>Title</th>
+                                <th>Edit</th>
+                                <th>Remove</th>
+                            </tr>
+                        </thead>
+                        <tbody id="productList">
+                            <!-- <tr>
+                                <td>vgvv</td>
+                                <td>nmn</td>
+                                <td>555</td>
+                                <td>tytyr</td>
+                                <td class="text-center">
+                                    <button class="btn btn-sm text-warning" role="button">EDIT</button>
+                                </td>
+                                <td class="text-center">
+                                    <button class="btn btn-sm text-danger" role="button">DELETE</button>
+                                </td>
+                            </tr> -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="spinner d-none" id="spinner">
+        <div class="spinner-border text-warning" role="status">
+  <span class="sr-only">Loading...</span>
+</div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./assets/js/app.js"></script>
+</body>
+</html>
